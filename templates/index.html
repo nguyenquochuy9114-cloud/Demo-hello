@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Analyzer Test</title>
+</head>
+<body>
+    <h1>Crypto Analyzer</h1>
+    <form method="get" action="/analyze">
+        <input type="text" name="coin" placeholder="bitcoin" required>
+        <button type="submit">Phân tích</button>
+    </form>
+    {% if coin %}
+        <h2>Kết quả cho {{ coin }}</h2>
+        <p>Giá: {{ price }}</p>
+    {% endif %}
+</body>
+</html>
